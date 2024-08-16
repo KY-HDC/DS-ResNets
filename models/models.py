@@ -16,6 +16,5 @@ def model_(params, device):
     return mod
 
 def transfer(model, seed, n_class, feat=1024):
-    init_rand(seed)
     model.fc = nn.Linear(feat, n_class)#resnet
 
