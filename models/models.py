@@ -14,3 +14,8 @@ def model_(params, device):
         mod.load_state_dict(resnet.Resnet50_Weights.DEFAULT, False)
         
     return mod
+
+def transfer(model, seed, n_class, feat=1024):
+    init_rand(seed)
+    model.fc = nn.Linear(feat, n_class)#resnet
+
