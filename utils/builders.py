@@ -1,5 +1,3 @@
-import sys
-
 from utils.norms import softmax, sigmoid, init_random
 from utils.distance import minkovski
 from sklearn.manifold import TSNE
